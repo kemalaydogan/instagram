@@ -1,0 +1,23 @@
+<% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @post, :class => 'new_form', :html => { :multipart => true } do |f| %>
+  <div id="new_post_description_row">
+	  <%= f.label :description, :class => 'new_post_description' %>
+	  <%= f.text_area :description, :class => "new_post_description_label" %>
+  </div>
+  <p> </p>
+  <div>
+    <%= f.label :picture, :class => "new_post_picture_label" %>
+    <%= f.file_field :picture, :class => "new_post_picture" %>
+  </div>
+	<%= f.submit :class => "btn btn-primary" %>
+<% end %>
