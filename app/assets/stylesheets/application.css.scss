@@ -5846,7 +5846,7 @@ button.close {
 }
 
 .photo {
-	height: 500px;
+	height: 400px;
 }
 .thumbnail {
   width: 300px;
@@ -5899,8 +5899,16 @@ button.close {
 	color:black;
 	/*word-spacing: normal  */
 }
+.glyphicon glyphicon-remove {
+  margin-top: 10px;
+}
 
 .caption .glyphicon {
 	margin-left: 10px;
 }
+
+a:link {color:#888;}      /* unvisited link */
+a:visited {color:#888;}  /* visited link */
+a:hover {color:black;}  /* mouse over link */
+a:active {color:black;}  /* selected link */
 /*# sourceMappingURL=bootstrap.css.map */

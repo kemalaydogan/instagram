@@ -1,33 +1,35 @@
 <div class="container">
 	<div class="jumbotron">
 	  <div class="container">
-	    <p> Black and white photos of random people's breakfast. With a black and white filter.<p>Oddly saturated photos of that same sunset you walk past every morning. People thinking they're deep for taking a photo of a slug.</p></p>
+	    <p> Black and white photos of random people's breakfast. I'm talking literally cereal. And it's being shared here.<p>Oddly saturated photos of that same road you walk past every morning. People thinking they're deep for taking a photo of a slug.</p></p>
 	    <h4> Welcome to Instagram! </h4>
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       	<ul class="nav navbar-nav">
-      		<li><a href="posts/new"><span class="glyphicon glyphicon-plus"> Add a picture</a></li>
+      		<li><a href="posts/new"><span class="glyphicon glyphicon-plus"></span> Add a picture</a></li>
       		<li><a href="#"><span class="glyphicon glyphicon-picture"></span> View a random pic</a></li>
-      		<li><a href="#"><span class="glyphicon glyphicon-star"> The Special Gallery</a></li>
+      		<li><a href="#"><span class="glyphicon glyphicon-star"></span> The Special Gallery</a></li>
       	</ul>
       </div>
 	  </div>
 	</div>
 </div>
-<div id="post_container">
+<div class="post_container">
 	<% if @posts.any? %>
+		<div class="posts">
 			<% @posts.each do |post| %>
 				<div class="photo">
     			<div class="thumbnail">
       			<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
-      				<div class="caption">
-       				<h3><%= post.description %></h3>
-        			<p><a href="#" class="glyphicon glyphicon-picture" role="button">View</a>
-        			<a href="#" class="glyphicon glyphicon-pencil" role="button">Edit</a>
-        			<%= link_to 'Delete', post_path(post), method: :delete, class: 'glyphicon glyphicon-remove' %>
+      			<div class="caption">
+	       			<h3><%= post.description %></h3>
+	        		<p><a href="#" class="glyphicon glyphicon-picture" role="button"> View </a></p>
+	        		<a href="#" class="glyphicon glyphicon-pencil" role="button"> Edit </a>
+	        		<%= link_to ' Delete', post_path(post), method: :delete, class: 'glyphicon glyphicon-remove' %>
       			</div>
     			</div>
 				</div>
 			<% end %>
+		</div>
 	<% else %>
 		No posts yet
 	<% end %>
