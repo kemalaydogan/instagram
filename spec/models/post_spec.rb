@@ -10,20 +10,20 @@ describe Post do
 
 		describe '#tag_names' do
 			it 'should create a tag if it does not exist' do
-				post = Post.create(description: 'A', tag_names: '#makersswag #yolo')
+				post = create(:post, tag_names:'#makersswag #yolo')
 				expect(post.tags.count).to eq 2
 				expect(post.tags.first.name).to eq "#makersswag"
 			end
 
 			it 'should create a tag if it does not exist' do
-				post = Post.create(description: 'A', tag_names: '#makersswag')
+				post = create(:post, tag_names:'#makersswag')
 				expect(post.tags.count).to eq 1
 				expect(post.tags.first.name).to eq "#makersswag"
 			end
 
 			it 'should use the tag if it already exists' do
-				post = Tag.create(name: '#swag')
-				post = Post.create(description: 'A', tag_names: '#swag')
+				tag = Tag.create(name: '#swag')
+				post = create(:post, tag_names:'#swag')
 
 				expect(post.tags.count).to eq 1
 				expect(post.tags.first.name).to eq '#swag'
@@ -31,10 +31,12 @@ describe Post do
 			end
 
 			it 'should keep tags unique' do
-				post = Post.create(description: 'A', tag_names: '#swag #yolo #swag')
+				post = create(:post, tag_names:'#swag #yolo #swag')
 
 				expect(post.tags.count).to eq 2
 			end
 		end
 	end
+
 end
+
