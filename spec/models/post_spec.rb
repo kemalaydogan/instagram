@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'capybara'
 
 describe Post do
 	context 'validations' do
@@ -11,12 +12,14 @@ describe Post do
 		describe '#tag_names' do
 			it 'should create a tag if it does not exist' do
 				post = create(:post, tag_names:'#makersswag #yolo')
+
 				expect(post.tags.count).to eq 2
 				expect(post.tags.first.name).to eq "#makersswag"
 			end
 
 			it 'should create a tag if it does not exist' do
 				post = create(:post, tag_names:'#makersswag')
+
 				expect(post.tags.count).to eq 1
 				expect(post.tags.first.name).to eq "#makersswag"
 			end
@@ -37,6 +40,5 @@ describe Post do
 			end
 		end
 	end
-
 end
 

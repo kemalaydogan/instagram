@@ -14,5 +14,11 @@
 	</div>
 </div>
 <div class="post_container">
-	<%= render 'post' %>
+	<% if @posts.any? %>
+		<div class="posts">
+				<%= render @posts %>
+		</div>
+	<% else %>
+		No posts yet
+	<% end %>
 </div>

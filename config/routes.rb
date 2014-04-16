@@ -1,4 +1,6 @@
 Instagram::Application.routes.draw do
+  resources :tags
+
   devise_for :users
   root 'posts#index'
   resources :posts
