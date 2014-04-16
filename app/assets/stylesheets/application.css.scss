@@ -5895,6 +5895,10 @@ button.close {
 	/*word-spacing: normal*/
 }
 
+.glyphicon {
+  vertical-align: middle;
+}
+
 .glyphicon:hover{
 	color:black;
 	/*word-spacing: normal  */
@@ -5907,6 +5911,14 @@ button.close {
 	margin-left: 10px;
 }
 
+.navbar-brand p {
+  font-size: 80%
+}
+#sign_in {
+  border: 1px, black;
+  width: 300px;
+  margin-left: 100px;
+}
 a:link {color:#888;}      /* unvisited link */
 a:visited {color:#888;}  /* visited link */
 a:hover {color:black;}  /* mouse over link */

@@ -4,59 +4,18 @@
   <title>Instagram</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <%= stylesheet_link_tag "application" %>
-
+  <%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to 'Instagram', posts_path, class: 'navbar-brand' %>  
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">
-        	<span class="glyphicon glyphicon-import"> Login</a></li></span>
-        <li><a href="#">
-        	<span class="glyphicon glyphicon-export"> Logout</a></li></span>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-camera"> Photos <b class="caret"></b></a></span>
-          <ul class="dropdown-menu">
-            <li><a href="#">Add photo</a></li>
-            <li><a href="#">Delete photo</a></li>
-            <li><a href="#">Edit photo</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Profile Page</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+
+<%= render 'layouts/header' %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
 <%= yield %>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"%>
 <%= javascript_include_tag "bootstrap.min.js"%>
 </body>
 </html>
