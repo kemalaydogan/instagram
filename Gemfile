@@ -39,6 +39,7 @@ gem 'devise'
 
 gem "factory_girl_rails", "~> 4.0"
 
+gem "bootstrap-sass"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

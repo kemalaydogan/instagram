@@ -1,3 +1,104 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#post_container {
+	display: block;
+	margin-right: 30px;
+	padding-left: 10px;
+	border: 2px, black;
+}
+
+.photo {
+	height: 400px;
+}
+.thumbnail {
+  width: 300px;
+	height: auto;
+	margin-left: 50px;
+}
+
+#post #post_description {
+	text-align: center;
+}
+
+#post #post_photo {
+	text-align: center;
+}
+
+.jumbotron p {
+  font-size: 100%;
+}
+
+
+.photo {
+	float:left ;
+}
+.caption {
+	text-align: center;
+}
+
+.new_form {
+}
+
+.new_post_description {
+}
+
+.new_post_description_label {
+}
+
+.new_post_picture {
+}
+
+.new_post_picture_label {
+	float:left;
+}
+
+.glyphicon {
+	color:#888; 
+	/*word-spacing: normal*/
+}
+
+.glyphicon {
+  vertical-align: middle;
+}
+
+.glyphicon:hover{
+	color:black;
+	/*word-spacing: normal  */
+}
+.glyphicon glyphicon-remove {
+  margin-top: 10px;
+}
+
+.caption .glyphicon {
+	margin-left: 10px;
+}
+
+.navbar-brand p {
+  font-size: 80%
+}
+#sign_in {
+  border: 1px, black;
+  width: 300px;
+  margin-left: 100px;
+}
+
+#sign_up {
+  border: 1px, black;
+  width: 300px;
+  margin-left: 100px;
+}
+
+#post {
+  float: left;
+}
+
+.jumbotron p {
+  font-size: 100%;
+}
+a:link {color:#888;}      /* unvisited link */
+a:visited {color:#888;}  /* visited link */
+a:hover {color:black;}  /* mouse over link */
+a:active {color:black;}  /* selected link */
+/*# sourceMappingURL=bootstrap.css.map */
