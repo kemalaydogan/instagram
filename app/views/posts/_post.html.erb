@@ -5,9 +5,9 @@
  			<h3><%= post.description %></h3>
  			<% post.tags.each do |tag| %>
  				<%= link_to tag.name, tag %>
- 			<% end %>
-  		<p><a href="#" class="glyphicon glyphicon-picture" role="button"> View </a></p>
-  		<%= link_to 'Edit', edit_post_path(post), class: 'glyphicon glyphicon-pencil' %>	
+ 			<% end %></br>
+  		<%= link_to 'View', post_path(post), class: "glyphicon glyphicon-picture"  %></br>
+  		<%= link_to 'Edit', edit_post_path(post), class: 'glyphicon glyphicon-pencil' %>
   		<%= link_to ' Delete', post_path(post), method: :delete, class: 'glyphicon glyphicon-remove' %>
 		</div>
 	</div>

@@ -1,0 +1,14 @@
+<div class="photo">
+	<div class="thumbnail">
+		<%= image_tag @post.picture.url(:medium), class: 'uploaded-pic' %>
+		<div class="caption">
+ 			<h3><%= @post.description %></h3>
+ 			<% @post.tags.each do |tag| %>
+ 				<%= link_to tag.name, tag %>
+ 			<% end %>
+  		<%= link_to 'View', post_path(@post), class: "glyphicon glyphicon-picture"  %>
+  		<%= link_to 'Edit', edit_post_path(@post), class: 'glyphicon glyphicon-pencil' %>	
+  		<%= link_to ' Delete', post_path(@post), method: :delete, class: 'glyphicon glyphicon-remove' %>
+		</div>
+	</div>
+</div>

@@ -41,4 +41,8 @@ class PostsController < ApplicationController
 		params[:post].permit(:description, :picture, :tag_names)
 	end
 
+	def show
+		@post = Post.find params[:id]
+	end
+
 end
