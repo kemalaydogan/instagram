@@ -6,9 +6,19 @@
  			<% @post.tags.each do |tag| %>
  				<%= link_to tag.name, tag %>
  			<% end %>
+  		<h5><%= pluralize @post.comments.count, 'comments' %>  </h5>
   		<%= link_to 'View', post_path(@post), class: "glyphicon glyphicon-picture"  %>
-  		<%= link_to 'Edit', edit_post_path(@post), class: 'glyphicon glyphicon-pencil' %>	
+  		<%= link_to 'Add a comment', new_post_comment_path(@post), class: "glyphicon-pencil" %></br>
+  		<%= link_to 'Edit', edit_post_path(@post), class: 'glyphicon glyphicon-pencil' %>
   		<%= link_to ' Delete', post_path(@post), method: :delete, class: 'glyphicon glyphicon-remove' %>
 		</div>
 	</div>
+</div>
+
+<div id="comment_container">
+	<% @post.comments.each do |comment| %>
+		<div id="comments_container">
+			<%= comment.content %>
+		</div>
+	<% end %></br></br>
 </div>

@@ -7,12 +7,11 @@
  				<%= link_to tag.name, tag %>
  			<% end %></br>
  			<h5><%= pluralize post.comments.count, 'comments' %>  </h5>
-  		<%= link_to 'View', post_path(post), class: "glyphicon glyphicon-picture"  %>
-  		<%= link_to 'Add a comment', new_post_comment_path(post), class: "glyphicon-pencil" %></br>
-  		<%= link_to 'Edit', edit_post_path(post), class: 'glyphicon glyphicon-pencil' %>
+  		<%= link_to ' View', post_path(post), class: "glyphicon glyphicon-picture"  %>
+  		<%= link_to 'Add a comment', new_post_comment_path(post), class: "glyphicon glyphicon-pencil" %></br></br>
+  		<%= link_to ' Edit', edit_post_path(post), class: 'glyphicon glyphicon-pencil' %>
   		<%= link_to ' Delete', post_path(post), method: :delete, class: 'glyphicon glyphicon-remove' %>
+  		<%= link_to ' Print pic', new_post_charge_path(post), class: 'glyphicon glyphicon-print' %>
 		</div>
 	</div>
 </div>
-
-	

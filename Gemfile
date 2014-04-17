@@ -31,6 +31,8 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 gem 'sqlite3'
 
 gem "paperclip", "~> 3"
