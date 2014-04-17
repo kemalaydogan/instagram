@@ -1,7 +1,7 @@
 Instagram::Application.routes.draw do
+  devise_for :users
   resources :tags, only: [:show]
 
-  devise_for :users
   root 'posts#index'
   resources :posts do
     resources :comments

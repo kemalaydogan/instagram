@@ -40,6 +40,10 @@ gem 'devise'
 gem "factory_girl_rails", "~> 4.0"
 
 gem "bootstrap-sass"
+
+gem 'aws-sdk'
+
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/alexpeattie/heroku_secrets.git
+  revision: b0c5f0680c9e57f7749d404426b8841d6ffe0114
+  specs:
+    heroku_secrets (0.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -28,6 +34,10 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    aws-sdk (1.38.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+      uuidtools (~> 2.1)
     bcrypt (3.1.7)
     bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
@@ -155,6 +165,7 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uuidtools (2.1.4)
     warden (1.2.3)
       rack (>= 1.0)
     xpath (2.0.0)
@@ -164,11 +175,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk
   bootstrap-sass
   capybara
   coffee-rails (~> 4.0.0)
   devise
   factory_girl_rails (~> 4.0)
+  heroku_secrets!
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 3)

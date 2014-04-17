@@ -1,7 +1,13 @@
 class Post < ActiveRecord::Base
 	validates :description, presence: true
 
-	has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>", :large => "550x550"}
+	has_attached_file :picture, :styles => { :medium => "300x300>", :thumb => "100x100>", :large => "550x550"},
+	storage: :s3,
+  bucket: 'bonobospics',
+  s3_credentials: {
+    access_key_id: Rails.application.secrets.s3_access_key,
+    secret_access_key: Rails.application.secrets.s3_secret_key
+   }
 	validates_attachment_content_type :picture, content_type: ["image/jpg", "image/jpeg", "image/png"]
 
 	has_and_belongs_to_many :tags 
